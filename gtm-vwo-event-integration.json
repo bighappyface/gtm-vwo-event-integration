@@ -1,10 +1,10 @@
 {
     "exportFormatVersion": 1.3,
-    "exportTime": "2016-07-12 04:40:39",
+    "exportTime": "2016-07-12 20:52:40",
     "containerVersion": {
         "accountId": "150065697",
         "containerId": "2387199",
-        "containerVersionId": "1",
+        "containerVersionId": "0",
         "deleted": false,
         "container": {
             "accountId": "150065697",
@@ -17,7 +17,7 @@
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1468296293289",
+            "fingerprint": "1468356749566",
             "enabledBuiltInVariable": [
                 "PAGE_URL",
                 "PAGE_HOSTNAME",
@@ -46,7 +46,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1468296138304",
+                "fingerprint": "0",
                 "firingTriggerId": [
                     "5"
                 ],
@@ -114,10 +114,10 @@
                     {
                         "type": "TEMPLATE",
                         "key": "trackingId",
-                        "value": "UA-35639070-6"
+                        "value": "{{VWO - GA Property ID}}"
                     }
                 ],
-                "fingerprint": "1468296293289",
+                "fingerprint": "0",
                 "firingTriggerId": [
                     "6"
                 ],
@@ -125,7 +125,7 @@
                 "tagFiringOption": "ONCE_PER_EVENT"
             }
         ],
-        "fingerprint": "1468296316447",
+        "fingerprint": "0",
         "trigger": [
             {
                 "accountId": "150065697",
@@ -192,7 +192,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "1468296030034",
+                "fingerprint": "1468356638553",
                 "parentFolderId": "4"
             },
             {
@@ -235,7 +235,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "1468295963093",
+                "fingerprint": "1468356645611",
                 "parentFolderId": "4"
             }
         ],
@@ -268,7 +268,7 @@
                         "value": "vwo.campaignId"
                     }
                 ],
-                "fingerprint": "1468295761817",
+                "fingerprint": "0",
                 "parentFolderId": "4"
             },
             {
@@ -299,7 +299,23 @@
                         "value": "vwo.campaignName"
                     }
                 ],
-                "fingerprint": "1468295811487",
+                "fingerprint": "0",
+                "parentFolderId": "4"
+            },
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "variableId": "5",
+                "name": "VWO - GA Property ID",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "UA-12345678-1"
+                    }
+                ],
+                "fingerprint": "0",
                 "parentFolderId": "4"
             },
             {
@@ -330,7 +346,7 @@
                         "value": "vwo.variationId"
                     }
                 ],
-                "fingerprint": "1468295755214",
+                "fingerprint": "0",
                 "parentFolderId": "4"
             },
             {
@@ -361,7 +377,7 @@
                         "value": "vwo.variationName"
                     }
                 ],
-                "fingerprint": "1468295793628",
+                "fingerprint": "0",
                 "parentFolderId": "4"
             }
         ],
