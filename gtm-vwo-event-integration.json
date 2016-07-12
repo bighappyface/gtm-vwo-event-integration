@@ -1,0 +1,378 @@
+{
+    "exportFormatVersion": 1.3,
+    "exportTime": "2016-07-12 04:40:39",
+    "containerVersion": {
+        "accountId": "150065697",
+        "containerId": "2387199",
+        "containerVersionId": "1",
+        "deleted": false,
+        "container": {
+            "accountId": "150065697",
+            "containerId": "2387199",
+            "name": "GTM-VWO",
+            "publicId": "GTM-TRNZJV",
+            "timeZoneCountryId": "US",
+            "timeZoneId": "America/Los_Angeles",
+            "notes": "",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1468296293289",
+            "enabledBuiltInVariable": [
+                "PAGE_URL",
+                "PAGE_HOSTNAME",
+                "PAGE_PATH",
+                "REFERRER",
+                "EVENT"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "tagId": "1",
+                "name": "VWO - Integration",
+                "type": "html",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\nvar _vis_opt_queue = window._vis_opt_queue || [], _vis_counter = 0; window.dataLayer = window.dataLayer || [];\n_vis_opt_queue.push(function() {\n    try {\n        if(!_vis_counter) {\n            var _vis_data = {},_vis_combination,_vis_id,_vis_l=0;\n            for(;_vis_l<_vwo_exp_ids.length;_vis_l++) {\n                _vis_id = _vwo_exp_ids[_vis_l];\n                if(_vwo_exp[_vis_id].ready) {\n                    _vis_combination = _vis_opt_readCookie('_vis_opt_exp_'+_vis_id+'_combi');\n                    if(typeof(_vwo_exp[_vis_id].combination_chosen) != \"undefined\")\n                        _vis_combination = _vwo_exp[_vis_id].combination_chosen;\n                    if(typeof(_vwo_exp[_vis_id].comb_n[_vis_combination]) != \"undefined\") {\n                      window.dataLayer.push({\"vwo.campaignId\" : _vis_id,\"vwo.campaignName\" : _vwo_exp[_vis_id].name, \"vwo.variationId\" : _vis_combination, \"vwo.variationName\":_vwo_exp[_vis_id].comb_n[_vis_combination],\"event\":\"VWO\"});\n                        _vis_counter++;\n                    }\n                }\n            }\n        }\n    }\n    catch(err) {};\n});\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1468296138304",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "parentFolderId": "4",
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "tagId": "2",
+                "name": "VWO - UA Event Tracking",
+                "type": "ua",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "VWO"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "{{VWO - Campaign ID}}:{{VWO - Campaign Name}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventLabel",
+                        "value": "{{VWO - Variation ID}}:{{VWO - Variation Name}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "UA-35639070-6"
+                    }
+                ],
+                "fingerprint": "1468296293289",
+                "firingTriggerId": [
+                    "6"
+                ],
+                "parentFolderId": "4",
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "fingerprint": "1468296316447",
+        "trigger": [
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "triggerId": "6",
+                "name": "VWO - Datalayer Push",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "VWO"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{VWO - Campaign ID}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "0"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{VWO - Variation ID}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "0"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1468296030034",
+                "parentFolderId": "4"
+            },
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "triggerId": "5",
+                "name": "VWO - Generic",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "VWO"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{VWO - Campaign ID}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "0"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1468295963093",
+                "parentFolderId": "4"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "variableId": "1",
+                "name": "VWO - Campaign ID",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "0"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "vwo.campaignId"
+                    }
+                ],
+                "fingerprint": "1468295761817",
+                "parentFolderId": "4"
+            },
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "variableId": "4",
+                "name": "VWO - Campaign Name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "0"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "vwo.campaignName"
+                    }
+                ],
+                "fingerprint": "1468295811487",
+                "parentFolderId": "4"
+            },
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "variableId": "2",
+                "name": "VWO - Variation ID",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "0"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "vwo.variationId"
+                    }
+                ],
+                "fingerprint": "1468295755214",
+                "parentFolderId": "4"
+            },
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "variableId": "3",
+                "name": "VWO - Variation Name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "0"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "vwo.variationName"
+                    }
+                ],
+                "fingerprint": "1468295793628",
+                "parentFolderId": "4"
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "150065697",
+                "containerId": "2387199",
+                "folderId": "4",
+                "name": "VWO",
+                "fingerprint": "1468295701654"
+            }
+        ]
+    }
+}
